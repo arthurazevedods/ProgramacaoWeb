@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    display: flex;
+    
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: black;
+    height: 50px;
+}
+
+li{
+    list-style-type: none;
+    color: white;
+    
+}
+li:hover{
+    color: blue;
+}
+
+.vermelho{
+    background-color: red;
+}
+
+.rosa{
+    background-color: pink;
+}
+
+.roxo{
+    background-color: purple;
+}
+
+.azul{
+    background-color: blue;
+}

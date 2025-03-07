@@ -1,0 +1,30 @@
+body{
+    background-color: black;
+}
+
+h1{
+    color: white;
+    font-size: 80px;
+    border: 5px solid white;
+    padding: 20px; 
+    width: 800px;
+    margin-left: 350px;
+}
+
+ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+li{
+    color: white;
+    font-size: 25px;
+    list-style-type:none;
+    margin: 10px;
+}
+
+li:hover{
+    color: blue;
+    cursor: pointer;
+    font-size: 100px;
+}
