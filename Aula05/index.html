@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model - Explicação Visual</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>O que é o Box Model?</h1>
+        <p>
+            O box model é um conceito fundamental no CSS que descreve como os elementos HTML são renderizados na página.
+            Cada elemento é representado como uma "caixa" composta por quatro partes:
+        </p>
+    </header>
+
+    <main>
+        <!-- Explicação das partes do Box Model -->
+        <section class="box-model-parts">
+            <h2>Partes do Box Model</h2>
+            <div class="part">
+                <div class="color-box color-content"></div>
+                <p><strong>Conteúdo (Content)</strong>: É a área onde o conteúdo do elemento (texto, imagens, etc.) é
+                    exibido.</p>
+            </div>
+            <div class="part">
+                <div class="color-box color-padding"></div>
+                <p><strong>Padding (Preenchimento)</strong>: Espaço entre o conteúdo e a borda do elemento.</p>
+            </div>
+            <div class="part">
+                <div class="color-box color-border"></div>
+                <p><strong>Border (Borda)</strong>: A linha que envolve o padding e o conteúdo.</p>
+            </div>
+            <div class="part">
+                <div class="color-box color-margin"></div>
+                <p><strong>Margin (Margem)</strong>: Espaço fora da borda, que separa o elemento de outros elementos.
+                </p>
+            </div>
+        </section>
+
+        <!-- Exemplo Visual do Box Model -->
+        <section class="box-model-example">
+            <h2>Exemplo Visual do Box Model</h2>
+            <div class="box">
+                <div class="content">
+                    Conteúdo
+                </div>
+            </div>
+            <p class="example-description">
+                Aqui, a caixa acima ilustra o box model. As cores representam:
+                <span class="color-content">Conteúdo</span>,
+                <span class="color-padding">Padding</span>,
+                <span class="color-border">Border</span>, e
+                <span class="color-margin">Margin</span>.
+            </p>
+        </section>
+
+        <!-- Explicação de width e height -->
+        <section class="width-height">
+            <h2>Como <code>width</code> e <code>height</code> se relacionam com o Box Model?</h2>
+            <p>
+                As propriedades <code>width</code> e <code>height</code> definem o tamanho do <strong>conteúdo</strong>
+                da caixa. Por exemplo:
+            </p>
+            <pre><code>div {
+  width: 200px;
+  height: 100px;
+}</code></pre>
+            <p>
+                Nesse caso, a área de conteúdo do <code>div</code> terá 200px de largura e 100px de altura.
+            </p>
+            <p>
+                No entanto, o tamanho total do elemento na página depende não apenas do <code>width</code> e
+                <code>height</code>, mas também do <strong>padding</strong>, <strong>border</strong> e
+                <strong>margin</strong>.
+            </p>
+        </section>
+
+        <!-- Exemplo Prático -->
+        <section class="practical-example">
+            <h2>Exemplo Prático</h2>
+            <p>Suponha que você tenha o seguinte CSS:</p>
+            <pre><code>div {
+  width: 200px;
+  height: 100px;
+  padding: 20px;
+  border: 10px solid black;
+  margin: 30px;
+}</code></pre>
+            <p>Aqui está como o box model funciona:</p>
+            <ul>
+                <li><strong>Conteúdo</strong>: 200px (largura) x 100px (altura).</li>
+                <li><strong>Padding</strong>: Adiciona 20px em todos os lados. Agora, a largura total do conteúdo +
+                    padding é 240px, e a altura é 140px.</li>
+                <li><strong>Border</strong>: Adiciona 10px em todos os lados. A largura total agora é 260px, e a altura
+                    é 160px.</li>
+                <li><strong>Margin</strong>: Adiciona 30px de espaço externo em todos os lados. A margem não afeta o
+                    tamanho total da caixa, mas afeta o espaço ao redor dela.</li>
+            </ul>
+        </section>
+
+        <!-- Box-Sizing -->
+        <section class="box-sizing">
+            <h2>Box-Sizing: Controlando o Cálculo</h2>
+            <p>
+                Por padrão, o CSS usa o modelo <code>content-box</code>, onde o <code>width</code> e <code>height</code>
+                se referem apenas ao conteúdo. No entanto, você pode mudar isso com a propriedade
+                <code>box-sizing</code>:
+            </p>
+            <pre>
+                <code>
+    div {
+        width: 200px;
+        height: 100px;
+        padding: 20px;
+        border: 10px solid black;
+        box-sizing: border-box;
+    }
+                </code>
+            </pre>
+            <p>
+                Nesse caso, o tamanho total da caixa será exatamente 200px de largura e 100px de altura, incluindo o
+                padding e a borda.
+            </p>
+        </section>
+
+        <!-- Resumo -->
+        <section class="summary">
+            <h2>Resumo</h2>
+            <ul>
+                <li><code>width</code> e <code>height</code> definem o tamanho do <strong>conteúdo</strong>.</li>
+                <li>O tamanho total do elemento depende também do <strong>padding</strong>, <strong>border</strong> e
+                    <strong>margin</strong>.
+                </li>
+                <li>Use <code>box-sizing: border-box;</code> para incluir padding e borda no cálculo do
+                    <code>width</code> e <code>height</code>.
+                </li>
+            </ul>
+        </section>
+
+        <!--Sessãp interativa-->
+        <section class="interactive">
+            <h2>Experimente</h2>
+            <label for="font">Font Size (px):</label>
+            <input type="number" id="font" value="32">
+            <label for="width">Largura (px):</label>
+            <input type="number" id="width" value="200">
+            <label for="height">Altura (px):</label>
+            <input type="number" id="height" value="100">
+            <label for="padding">Padding (px):</label>
+            <input type="number" id="padding" value="20">
+            <label for="border">Borda (px):</label>
+            <input type="number" id="border" value="10">
+            <label for="margin">Margin (px):</label>
+            <input type="number" id="margin" value="30">
+            <button onclick="updateBox()">Aplicar</button>
+            <div id="interactive-box" class="box">Conteúdo</div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Espero que isso tenha ajudado a entender a relação entre <code>width</code>, <code>height</code> e o box
+            model!</p>
+    </footer>
+
+    <!--Javascript-->
+    <script>
+        function updateBox() {
+            const box = document.getElementById('interactive-box');
+            box.style.fontSize = document.getElementById('font').value + 'px'
+            box.style.width = document.getElementById('width').value + 'px';
+            box.style.height = document.getElementById('height').value + 'px';
+            box.style.padding = document.getElementById('padding').value + 'px';
+            box.style.borderWidth = document.getElementById('border').value + 'px';
+            box.style.margin = document.getElementById('margin').value + 'px';
+        }
+    </script>
+</body>
+
+</html>
