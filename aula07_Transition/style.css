@@ -1,0 +1,88 @@
+.box {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    margin-bottom: 12px;
+    background-color: orange;
+    display: block;
+    cursor: pointer;
+    /* Removi a transição da classe .box para aplicá-la individualmente em cada classe */
+}
+
+/* Diferentes funções de temporização para cada caixa */
+.box1 {
+    transition-property: width; /* Define que a propriedade "width" será animada */
+    transition-duration: 1s; /* Duração da transição */
+    transition-timing-function: ease; /* Função de temporização: inicia devagar, acelera no meio e desacelera no final */
+}
+
+.box2 {
+    transition-property: width;
+    transition-duration: 1s;
+    transition-timing-function: linear; /* Velocidade constante durante toda a transição */
+}
+
+.box3 {
+    transition-property: width;
+    transition-duration: 1s;
+    transition-timing-function: ease-in; /* Inicia devagar e acelera no final */
+}
+
+.box4 {
+    transition-property: width;
+    transition-duration: 1s;
+    transition-timing-function: ease-out; /* Inicia rápido e desacelera no final */
+}
+
+.box5 {
+    transition-property: width;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out; /* Combina ease-in e ease-out */
+}
+
+.box6 {
+    transition-property: width;
+    transition-duration: 1s;
+    transition-timing-function: step-start; /* A transição começa imediatamente, sem suavização */
+}
+
+.box7 {
+    transition-property: width;
+    transition-duration: 1s;
+    transition-timing-function: step-end; /* A transição ocorre apenas no final, sem suavização */
+}
+
+.box8 {
+    transition-property: width;
+    transition-duration: 1s;
+    transition-timing-function: steps(5, end); /* Divide a transição em 5 etapas */
+}
+
+.box9 {
+    transition-property: width;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1); /* Curva de transição personalizada */
+}
+
+/*
+    Seletor CSS:
+    input[type="checkbox"]:checked + .box
+
+    Explicação:
+    - input[type="checkbox"]: Seleciona todos os inputs do tipo checkbox.
+    - :checked: Aplica o estilo apenas quando o checkbox está marcado.
+    - +: Seleciona o irmão adjacente (o próximo elemento no mesmo nível).
+    - .box: Aplica o estilo ao elemento com a classe .box que está imediatamente após o checkbox marcado, que no caso, vão ser os labels.
+
+    Neste caso, quando o checkbox é marcado, a largura da .box adjacente é alterada para 500px.
+*/
+input[type="checkbox"]:checked + .box {
+    width: 500px;
+}
+
+span {
+    font-size: 20px;
+    color: black;
+    margin-top: 5px;
+    display: block;
+}

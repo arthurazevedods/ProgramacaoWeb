@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>CSS Transition</title>
+</head>
+<body>
+    <span>Ease: Inicia devagar, acelera no meio e desacelera no final (padrão).</span>
+    <!--
+        input: Um elemento de formulário que permite a interação do usuário.
+        type="checkbox": Define o input como uma caixa de seleção.
+        id="box1-checkbox": Identificador único para este input, usado para vincular ao label.
+    -->
+    <input type="checkbox" id="box1-checkbox">
+    <!--
+        label: Um elemento que associa um texto a um input.
+        for="box1-checkbox": Vincula o label ao input com o id correspondente.
+        class="box box1": Aplica estilos CSS a este label.
+    -->
+    <label for="box1-checkbox" class="box box1">Ease</label>
+
+    <!-- Repetir a mesma estrutura para os outros exemplos -->
+    <span>Linear: Velocidade constante durante toda a transição.</span>
+    <input type="checkbox" id="box2-checkbox">
+    <label for="box2-checkbox" class="box box2">Linear</label>
+
+    <span>Ease-In: Inicia devagar e acelera no final.</span>
+    <input type="checkbox" id="box3-checkbox">
+    <label for="box3-checkbox" class="box box3">Ease-In</label>
+
+    <span>Ease-Out: Inicia rápido e desacelera no final.</span>
+    <input type="checkbox" id="box4-checkbox">
+    <label for="box4-checkbox" class="box box4">Ease-Out</label>
+
+    <span>Ease-In-Out: Combina Ease-In e Ease-Out, começando e terminando devagar.</span>
+    <input type="checkbox" id="box5-checkbox">
+    <label for="box5-checkbox" class="box box5">Ease-In-Out</label>
+
+    <span>Step-start: A transição começa imediatamente, sem suavização.</span>
+    <input type="checkbox" id="box6-checkbox">
+    <label for="box6-checkbox" class="box box6">Step-start</label>
+
+    <span>Step-end: A transição ocorre apenas no final, sem suavização.</span>
+    <input type="checkbox" id="box7-checkbox">
+    <label for="box7-checkbox" class="box box7">Step-end</label>
+
+    <span>Steps: Divide a transição em 5 etapas, com mudanças no final de cada etapa.</span>
+    <input type="checkbox" id="box8-checkbox">
+    <label for="box8-checkbox" class="box box8">Steps(5, end)</label>
+
+    <span>Cubic-bezier: Permite definir uma curva de transição personalizada.</span>
+    <input type="checkbox" id="box9-checkbox">
+    <label for="box9-checkbox" class="box box9">Cubic-bezier</label>
+</body>
+</html>
