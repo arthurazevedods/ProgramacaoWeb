@@ -1,0 +1,44 @@
+.card {
+    width: 200px;
+    height: 300px;
+    border: 1px solid #cccc;
+    border-radius: 10px;
+    padding: 30px;
+    margin: auto;
+}
+
+.botao-principal {
+    width: 100%;
+    height: 60%;
+    padding: 5%;
+    background-color: palegoldenrod;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.botao-principal:active {
+    transform: translateY(-7px);
+}
+
+.texto-principal {
+    margin-top: 15px;
+    text-align: left;
+}
+
+.botao-redondo {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: auto;
+    background-color: papayawhip;
+    border: none;
+    bottom: 10px;
+    cursor: pointer;
+}
+
+.botao-redondo.clicado {
+    background-color: palevioletred;
+}

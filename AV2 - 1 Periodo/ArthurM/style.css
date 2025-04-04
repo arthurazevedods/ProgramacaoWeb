@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.card {
+    height: 300px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, background-color 0.3s ease; 
+    user-select: none;
+    position: relative;
+}
+
+.card:active {
+    transform: scale(1.05); 
+    background-color: #f0f0f0;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card1, .card2 {
+    background-color: rgb(255, 0, 0);
+    display: flex;
+    justify-content: center;
+    padding: 1px;
+    margin: 5px 0;
+}
+
+.card3 {
+ color: black;
+}
+
+.jetta {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
+}
+
+.jetta:active {
+    transform: translateY(-20px);
+    filter: hue-rotate(300deg);/
+}
+
+.icon {
+    position: absolute;
+    bottom: 10px; 
+    right: 10px;
+    background-color: #000;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.icon:active {
+    background-color: #ff0000; 
+    transform: scale(1.0);}
