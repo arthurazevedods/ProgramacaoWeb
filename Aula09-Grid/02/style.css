@@ -1,0 +1,73 @@
+.grid {
+	display: grid;
+}
+
+.logo {
+	grid-area: logo;
+}
+
+.sala {
+	grid-area: sala;
+}
+
+.copa {
+	grid-area: copa;
+}
+
+.garagem {
+	grid-area: garagem;
+}
+
+.quarto {
+	grid-area: quarto;
+}
+
+.cozinha {
+	grid-area: cozinha;
+}
+.quintal {
+    grid-area: quintal;
+}
+
+.casa {
+	grid-template-areas:
+		"logo sala sala quintal"
+		"garagem copa quarto quintal"
+        "garagem copa quarto quintal"
+		"garagem cozinha cozinha quintal"
+		;
+}
+
+
+
+/* Grid Item */
+.item {
+	margin: 5px;
+	background: tomato;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.grid {
+	max-width: 400px;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+}
+
+h1 {
+	text-align: center;
+	font-size: 1.25em;
+	font-weight: normal;
+}
+
+body {
+	font-family: monospace;
+	color: #333;
+	padding-bottom: 60px;
+	margin: 0px;
+}
+
+
+
+
+
